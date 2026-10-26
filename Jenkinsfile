@@ -11,7 +11,7 @@ pipeline {
         stage('Check Tools') {
             steps {
                 bat '"C:\\Program Files\\Git\\cmd\\git.exe" --version'
-                bat 'C:\Users\user\AppData\Local\Programs\DockerDesktop\resources\bin\docker.exe'
+                bat '"C:\\Users\\user\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe" --version'
                 bat 'aws --version'
             }
         }
