@@ -10,7 +10,7 @@ pipeline {
 
         stage('Check Tools') {
             steps {
-                bat 'git --version'
+                bat '"C:\\Program Files\\Git\\cmd\\git.exe" --version'
                 bat 'docker --version'
                 bat 'aws --version'
             }
