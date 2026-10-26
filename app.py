@@ -7,13 +7,12 @@ def home():
     return """
     <html>
         <head>
-            <title>My DevOps Project</title>
+            <title>DevOps Capstone</title>
         </head>
-        <body style="font-family: Arial; text-align: center; padding: 50px;">
-            <h1>Welcome to My DevOps Project!</h1>
-            <h2>Version 2 Successfully Deployed!</h2>
-            <p>Deployed automatically using Jenkins CI/CD.</p>
-            <p>Technologies: GitHub, Jenkins, Docker, AWS ECR and ECS</p>
+        <body>
+            <h1>My DevOps Capstone Project</h1>
+            <p>Deployed using Jenkins, Docker, Amazon ECR and Amazon ECS.</p>
+            <p>Deployment successful!</p>
         </body>
     </html>
     """
