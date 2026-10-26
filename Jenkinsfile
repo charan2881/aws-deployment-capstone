@@ -43,6 +43,17 @@ pipeline {
             }
         }
 
+        stage('Deploy to ECS') {
+    steps {
+        withCredentials([[$class: 'AmazonWebServicesCredentialsBinding',
+            credentialsId: 'aws-jenkins-creds']]) {
+            bat '''
+                "C:\\Users\\user\\AppData\\Local\\Programs\\Amazon\\AWSCLIV2\\aws.exe" ecs update-service --cluster aws-deployment-cluster --service aws-deployment-service --force-new-deployment --region eu-north-1
+            '''
+        }
+    }
+}
+
         stage('Login to ECR') {
             steps {
                 withCredentials([
